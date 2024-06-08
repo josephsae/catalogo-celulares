@@ -3,7 +3,7 @@
     <header class="flex items-center justify-center bg-white sticky py-4 top-0 z-10 border-b border-gray-300">
         <div class="flex justify-between items-center max-w-7xl w-5/6 ">
             <router-link to="/">
-                <h1 class="font-extrabold text-xl">LOGO</h1>
+                <h1 class="font-extrabold text-xl">Celulares</h1>
             </router-link>
             <router-link to="/cart" class="relative flex">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
