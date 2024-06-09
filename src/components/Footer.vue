@@ -24,7 +24,7 @@ const names = [
   "Jhon Marvel Cabrera Muñoz",
   "Yolvis Andrea Torres Torres",
   "Nicolas Beltran Vargas",
-  "Laura Vanessa",
+  "Laura Vanessa Bernal Saavedra ",
   "Joseph Brayan Smith Caicedo Sáenz",
   "Jaime Andrés Torres Duque",
   "Santiago Betancur Villegas",
