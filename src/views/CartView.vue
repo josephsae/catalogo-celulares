@@ -75,15 +75,18 @@
       </div>
       <div v-if="cartItems.length" class="w-full">
         <p class="font-bold text-xl flex justify-between">
-          Total: <span class="font-normal">{{ formatPrice(cartStore.cartTotal) }}</span>
+          Total:
+          <span class="font-normal">{{
+            formatPrice(cartStore.cartTotal)
+          }}</span>
         </p>
 
-        <button
-          class="btn btn-filled w-full mt-4 cursor-not-allowed bg-gray-300 border-gray-300"
-          disabled
+        <router-link
+          to="/checkout"
+          class="w-full block btn btn-filled bg-black mt-4 text-center"
         >
           Pagar ahora
-        </button>
+        </router-link>
       </div>
 
       <div v-if="!cartItems.length" class="flex flex-col gap-4">

@@ -77,7 +77,7 @@
           <button @click="addToCart(product, quantity)" class="btn btn-outline">
             Agregar al carrito
           </button>
-          <button class="btn btn-filled">Comprar ahora</button>
+          <!-- <button class="btn btn-filled">Comprar ahora</button> -->
         </div>
       </div>
     </div>
