@@ -1,5 +1,27 @@
 <template>
-  <main class="grid place-items-center screenHeight py-16">
+  <main class="flex items-center flex-col screenHeight pt-16 mb-24">
+    <div class="max-w-7xl w-5/6 lg:ml-20 lg:mb-20">
+      <router-link
+        v-if="product"
+        to="/"
+        class="text-sm flex items-center gap-1 bg-gray-100 rounded-lg pr-2 py-1 w-fit"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-left"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+        Volver
+      </router-link>
+    </div>
     <div
       v-if="product"
       class="max-w-7xl w-5/6 flex flex-col items-center justify-center gap-11 lg:flex-row lg:gap-16"
@@ -55,9 +77,7 @@
           <button @click="addToCart(product, quantity)" class="btn btn-outline">
             Agregar al carrito
           </button>
-          <button class="btn btn-filled">
-            Comprar ahora
-          </button>
+          <button class="btn btn-filled">Comprar ahora</button>
         </div>
       </div>
     </div>
