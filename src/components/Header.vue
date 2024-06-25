@@ -2,9 +2,9 @@
   <header
     class="flex items-center justify-center bg-white sticky py-4 top-0 z-10 border-b border-gray-300"
   >
-    <div class="flex justify-between items-center max-w-7xl w-5/6">
+    <div class="flex justify-center sm:justify-between items-center max-w-7xl w-5/6">
       <router-link to="/">
-        <h1 class="font-extrabold text-xl">Celulares</h1>
+        <h1 class="font-extrabold text-xl hidden sm:block">Celulares</h1>
       </router-link>
       <div class="flex items-center">
         <router-link to="/cart" class="relative flex mr-4">
