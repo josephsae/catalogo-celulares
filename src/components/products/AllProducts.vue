@@ -8,12 +8,12 @@
           v-model="search"
           type="text"
           placeholder="Buscar"
-          class="w-full py-2 px-4 bg-gray-100 rounded-lg focus-within:outline-none max-w-[400px]"
+          class="w-full py-2 px-4 bg-gray-100 rounded-lg focus-within:outline-none md:max-w-[400px]"
         />
 
         <button
           @click="showFiltersModal = !showFiltersModal"
-          class="flex items-center justify-center gap-1 font-semibold px-3 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all"
+          class="flex items-center justify-center gap-1 font-semibold px-3 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all text-sm w-full md:w-auto"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@
                 @click="ramSelected = ''"
                 :class="
                   !ramSelected
-                    ? 'bg-black text-white hover:bg-black border-black'
+                    ? 'bg-black text-white hover:!bg-black !border-black'
                     : ''
                 "
                 class="px-2 py-1 border border-gray-200 rounded-lg transition-all cursor-pointer hover:bg-gray-200"
@@ -83,7 +83,7 @@
                 v-for="ram in allRams"
                 :class="
                   ramSelected === ram
-                    ? 'bg-black text-white hover:bg-black border-black'
+                    ? 'bg-black text-white hover:!bg-black !border-black'
                     : ''
                 "
                 class="px-2 py-1 border border-gray-200 rounded-lg transition-all cursor-pointer hover:bg-gray-200"
@@ -100,7 +100,7 @@
                 @click="colorSelected = ''"
                 :class="
                   !colorSelected
-                    ? 'bg-black text-white hover:bg-black border-black'
+                    ? 'bg-black text-white hover:!bg-black !border-black'
                     : ''
                 "
                 class="px-2 py-1 border border-gray-200 rounded-lg transition-all cursor-pointer hover:bg-gray-200"
@@ -112,7 +112,7 @@
                 v-for="color in allColors"
                 :class="
                   colorSelected === color
-                    ? 'bg-black text-white hover:bg-black border-black'
+                    ? 'bg-black text-white hover:!bg-black !border-black'
                     : ''
                 "
                 class="px-2 py-1 border border-gray-200 rounded-lg transition-all cursor-pointer hover:bg-gray-200"

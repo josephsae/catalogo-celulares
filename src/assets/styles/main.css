@@ -17,7 +17,7 @@ html{
   }
 
   .btn {
-    @apply px-4 py-2 rounded-md font-semibold;
+    @apply px-4 py-2 rounded-md font-medium text-sm whitespace-nowrap;
   }
 
   .btn-outline {

@@ -7,7 +7,7 @@
         <h1 class="font-extrabold text-xl hidden sm:block">Celulares</h1>
       </router-link>
       <div class="flex items-center">
-        <router-link to="/cart" class="relative flex mr-4">
+        <router-link to="/cart" class="relative flex mr-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -28,12 +28,12 @@
             {{ totalItems }}
           </div>
         </router-link>
-        <div v-if="!isAuthenticated">
-          <router-link to="/login" class="btn">Iniciar Sesión</router-link>
-          <router-link to="/register" class="btn">Registrarse</router-link>
+        <div v-if="!isAuthenticated" class="flex gap-2">
+          <router-link to="/login" class="btn btn-filled">Iniciar Sesión</router-link>
+          <router-link to="/register" class="btn btn-outline">Registrarse</router-link>
         </div>
         <div v-else>
-          <button @click="logout" class="btn">Cerrar Sesión</button>
+          <button @click="logout" class="btn btn-outline">Cerrar Sesión</button>
         </div>
       </div>
     </div>
@@ -60,20 +60,3 @@ const logout = () => {
 };
 </script>
 
-<style scoped>
-.btn {
-  margin-left: 10px;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-</style>

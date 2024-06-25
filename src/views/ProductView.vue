@@ -78,12 +78,12 @@
           ({{ product.stock }} disponibles)
         </div>
 
-        <div class="flex gap-5">
-          <button @click="addToCart(product, quantity)" class="btn btn-outline">
-            Agregar al carrito
-          </button>
-          <!-- <button class="btn btn-filled">Comprar ahora</button> -->
-        </div>
+        <button
+          @click="addToCart(product, quantity)"
+          class="btn btn-outline flex items-center justify-center gap-2"
+        >
+          Agregar al carrito
+        </button>
       </div>
     </div>
     <div v-else-if="notFound" class="text-center">
@@ -137,8 +137,7 @@ const getRating = () => {
 };
 
 const increaseQuantity = () => {
-  if (quantity.value < product.value.stock)
-  quantity.value++;
+  if (quantity.value < product.value.stock) quantity.value++;
 };
 
 const decreaseQuantity = () => {
