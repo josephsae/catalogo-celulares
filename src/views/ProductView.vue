@@ -60,6 +60,10 @@
           <h3 class="font-bold">Detalles:</h3>
           <p class="first-letter:uppercase">{{ product.description }}</p>
         </div>
+        <div class="flex gap-5">
+          <p><strong>RAM: </strong>{{ product.ram }}</p>
+          <p><strong>Color: </strong>{{ product.color }}</p>
+        </div>
         <p class="font-bold text-2xl">{{ formatPrice(product.price) }}</p>
 
         <div class="font-bold flex items-center gap-6">
@@ -71,6 +75,7 @@
             <p>{{ quantity }}</p>
             <button @click="increaseQuantity" class="text-xl w-full">+</button>
           </div>
+          ({{ product.stock }} disponibles)
         </div>
 
         <div class="flex gap-5">
@@ -132,6 +137,7 @@ const getRating = () => {
 };
 
 const increaseQuantity = () => {
+  if (quantity.value < product.value.stock)
   quantity.value++;
 };
 
@@ -141,8 +147,9 @@ const decreaseQuantity = () => {
   }
 };
 
-const addToCart = (product, quantity) => {
-  cartStore.addToCart(product, quantity);
+const addToCart = (product, _quantity) => {
+  cartStore.addToCart(product, _quantity);
+  quantity.value = 1;
   toast.value = true;
   setTimeout(() => {
     const toastRef = document.querySelector(".animate-fade-in");
